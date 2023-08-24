@@ -1,0 +1,75 @@
+.history {
+  background-color: $beige;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+
+  &__container {
+    min-height: 550px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  &__container::before {
+    content: "";
+    @include orangeBlock;
+    left: 50%;
+    top: 40px;
+    margin-bottom: 50px;
+  }
+  &__content {
+    display: flex;
+    padding: 20px 0;
+    justify-content: space-between;
+    max-width: 768px;
+    min-height: 190px;
+  }
+  &__main-block,
+  &__booking-block {
+    padding: 16px 20px;
+  }
+  &__name--italizied {
+    font-size: 25px;
+    font-weight: 400;
+    letter-spacing: 0.5px;
+    line-height: 1.4;
+  }
+  &__booking-block {
+    display: flex;
+    flex-direction: column;
+  }
+  &__paragraph {
+    text-align: left;
+    font-size: 13px;
+    line-height: 1.8;
+    color: $dark-grey-1;
+    margin-bottom: 25px;
+    font-weight: 400;
+    position: relative;
+  }
+
+  &__paragraph:last-child::before {
+    position: absolute;
+    content: "";
+    display: block;
+    width: 2px;
+    height: 100%;
+    top: 5px;
+    left: -20px;
+    background-color: $dull-orange;
+  }
+}
+
+@media (max-width: 615px) {
+  .history {
+    &__content {
+      display: flex;
+      flex-direction: column;
+    }
+    &__main-block {
+      margin-top: 30px;
+    }
+  }
+}

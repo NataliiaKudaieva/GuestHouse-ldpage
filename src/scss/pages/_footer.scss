@@ -1,0 +1,242 @@
+.footer {
+  background-color: $dark-grey;
+  color: #fff;
+  &__container {
+    padding: 25px 0;
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    justify-content: space-between;
+    height: auto;
+    min-height: 608px;
+  }
+  &__content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    align-self: center;
+    font-size: 14px;
+    min-height: 200px;
+  }
+  &__list {
+    margin-top: 11px;
+  }
+  &__items {
+    margin-bottom: 10px;
+    letter-spacing: 0.2px;
+    line-height: 1.2;
+    font-weight: 400;
+    font-size: 14px;
+  }
+  &__link:link,
+  &__link:visited {
+    color: #fff;
+  }
+  &__link {
+    transition: all 0.3s;
+  }
+  &__link:hover {
+    color: $dull-orange;
+  }
+  &__nav {
+    flex: 1 0 280px;
+  }
+  &__social {
+    display: inline-block;
+    flex: 1 0 280px;
+    display: flex;
+    flex-direction: column;
+  }
+  &__group--icon {
+    padding: 21px 0;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+  }
+  &__icon {
+    display: inline-block;
+    width: 32px;
+    height: 32px;
+    margin-right: 20px;
+  }
+  &__span {
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    line-height: 20px;
+    margin-bottom: 11px;
+  }
+
+  &__icon:hover {
+    color: $dull-orange;
+    fill: currentColor;
+  }
+
+  &__link--social {
+    cursor: pointer;
+    display: inline-block;
+  }
+  &__letter {
+    flex: auto;
+  }
+  &__paragraph {
+    padding: 20px 0;
+    line-height: 1.2;
+    font-weight: 400;
+    font-size: 14px;
+    letter-spacing: 0.2px;
+  }
+
+  &__form {
+    position: relative;
+  }
+  &__input {
+    width: 576px;
+    overflow: hidden;
+    height: 52px;
+    border-radius: 5px;
+  }
+
+  &__input:placeholder-shown {
+    padding-left: 15px;
+  }
+  &__input[type="email"] {
+    display: block;
+    color: $dark-grey;
+    letter-spacing: 0.8px;
+    padding-left: 15px;
+    font-weight: 600;
+    font-size: 16px;
+  }
+  &__link > svg {
+    display: inline-block;
+    width: 150px;
+    color: #fff;
+    fill: currentColor;
+  }
+
+  &__link > svg:hover {
+    color: $dull-orange;
+    fill: currentColor;
+  }
+
+  &__reserved {
+    align-self: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  &__website--name {
+    padding: 20px 0;
+  }
+}
+
+@media screen and (max-width: 1200px) {
+  .footer {
+    &__container {
+      padding: 20px 30px;
+    }
+    &__input {
+      width: 400px;
+    }
+  }
+}
+
+@media screen and (max-width: 971px) {
+  .footer {
+    &__content {
+      display: flex;
+      flex-direction: column-reverse;
+      height: max-content;
+    }
+    &__letter {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+    }
+    &__paragraph {
+      margin: 15px 0;
+      line-height: 1.4;
+    }
+    &__social {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+
+    &__social {
+      flex: 0 1 160px;
+    }
+    &__nav {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      flex: 0 1 110px;
+    }
+    &__list {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+    &__link {
+      font-size: 16px;
+      margin-right: 15px;
+    }
+    &__span {
+      font-size: 17px;
+    }
+    &__paragraph {
+      font-size: 16px;
+      padding: 15px 10px;
+      text-align: center;
+    }
+
+    &__reserved {
+      margin: 20px 0;
+    }
+  }
+}
+
+@media screen and (max-width: 417px) {
+  .footer {
+    &__content {
+      margin-bottom: 20px;
+    }
+    &__input {
+      max-width: 250px;
+    }
+    &__reserved {
+      text-align: center;
+      margin: 30px 0;
+    }
+  }
+}
+
+#footer__icon {
+  display: inline-block;
+  width: 32px;
+  height: 32px;
+  margin-right: 20px;
+  fill: $light-grey;
+  transition: all 0.2s ease-in;
+}
+
+#footer__icon:hover {
+  fill: $dull-orange;
+}
+
+#footer__btn {
+  position: absolute;
+  display: block;
+  top: 8px;
+  right: 15px;
+  background-color: $dark-grey;
+  color: #fff;
+  padding: 7px 10px;
+  border-radius: 10px;
+  line-height: 20px;
+  font-size: 14px;
+}

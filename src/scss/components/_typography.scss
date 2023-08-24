@@ -1,0 +1,21 @@
+.section__header {
+  font-size: 32px;
+  line-height: 1.4;
+  color: $dark-grey;
+}
+
+.paragraph__header {
+  font-size: 16px;
+  line-height: 24px;
+  color: $dark-grey;
+}
+
+.logo:hover {
+  fill: $dull-orange;
+}
+
+.shown {
+  display: block;
+  transition: all 1.8s;
+  transform: translateY(-5px);
+}

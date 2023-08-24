@@ -1,0 +1,50 @@
+.guests {
+  position: relative;
+  background-color: $beige;
+  width: 100%;
+  min-height: 682px;
+  display: flex;
+
+  &__container {
+    overflow: hidden;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-direction: column;
+    overflow: hidden;
+    padding: 10px 15px;
+  }
+
+  &__container::before {
+    content: "";
+    @include orangeBlock;
+    top: 30px;
+    left: 50%;
+    margin-bottom: 50px;
+  }
+
+  &__header {
+    padding: 20px 15px;
+    max-width: 615px;
+    align-self: center;
+    text-align: center;
+    line-height: 1.2;
+    letter-spacing: 0.5px;
+  }
+  &__paragraph {
+    padding: 15px 0;
+  }
+}
+
+@media (max-width: 700px) {
+  .guests {
+    &__container {
+      display: flex;
+      justify-content: flex-start;
+    }
+    &__header {
+      margin: 30px 0 30px 0;
+      padding: 30px 15px 5px 15px;
+    }
+  }
+}
