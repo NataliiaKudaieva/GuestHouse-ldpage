@@ -1,0 +1,59 @@
+.guests {
+  background-color: $beige;
+  width: 100%;
+  min-height: 682px;
+  display: flex;
+  position: relative;
+
+  overflow: hidden;
+  &__container {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-direction: column;
+    position: relative;
+    z-index: 5;
+    padding: 0px 15px;
+    overflow: hidden;
+  }
+
+  &__container::before {
+    content: "";
+    @include orangeBlock;
+    top: 30px;
+    left: 50%;
+    margin-bottom: 50px;
+  }
+
+  &__content {
+    position: relative;
+    background-color: $beige;
+    z-index: 0;
+  }
+
+  &__header {
+    background-color: $beige;
+    padding: 20px 15px;
+    width: 100%;
+    align-self: center;
+    text-align: center;
+    line-height: 1.2;
+    letter-spacing: 0.5px;
+    position: relative;
+    z-index: 3;
+    overflow-x: hidden;
+  }
+  &__paragraph {
+    padding: 15px 0;
+  }
+}
+
+@media (max-width: 700px) {
+  .guests {
+    &__container {
+      display: flex;
+      justify-content: flex-start;
+      overflow: hidden;
+    }
+  }
+}

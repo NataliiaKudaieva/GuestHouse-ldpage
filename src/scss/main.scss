@@ -1,16 +1,21 @@
-@import "./base";
+/*Basic settings and utilities */
+
+@import "./reset";
 @import "./variables";
+@import "./base";
 @import "./utilities";
+@import "./typography";
+
+@import "./sections/header";
+@import "./sections/intro";
+@import "./sections/history";
+@import "./sections/motto";
+@import "./sections/arrangements";
+@import "./sections/activities";
+@import "./sections/guests";
+@import "./sections/invite";
+@import "./sections/booking";
+@import "./sections/footer";
+
 @import "./components/buttons";
-@import "./components/typography";
 @import "./components/slider";
-@import "./pages/header";
-@import "./pages/intro";
-@import "./pages/history";
-@import "./pages/arrangements";
-@import "./pages/motto";
-@import "./pages/activities";
-@import "./pages/guests";
-@import "./pages/invite";
-@import "./pages/booking";
-@import "./pages/footer";

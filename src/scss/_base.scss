@@ -12,44 +12,13 @@ body {
   height: 100%;
   line-height: 1;
   font-family: "Montserrat Alternates", sans-serif;
-}
-img {
-  max-width: 100%;
-}
-a {
-  text-decoration: none;
-}
-ul,
-ol {
-  list-style: none;
+  scroll-behavior: smooth;
 }
 
-input,
-button,
-textarea,
-select {
-  font: inherit;
-}
-
-////надо ли?
-
-// #wrapper {
-//   min-height: 100%;
-//   overflow: hidden;
-// }
-
+/*applies to all classes who have __container in the names */
 [class*="__container"] {
-  width: 1200px; ///content will be 1170px
+  width: 1200px;
   margin: 0 auto;
   padding: 10px 15px;
   max-width: 100%;
-} ///applies to all classes who have __container in the names
-
-/////mixins
-@mixin orangeBlock {
-  position: absolute;
-  transform: translate(-50%, -50%);
-  height: 8px;
-  width: 42px;
-  background-color: $dull-orange;
 }
