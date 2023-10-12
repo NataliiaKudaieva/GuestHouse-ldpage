@@ -3,14 +3,13 @@ const slider = () => {
   const prev = document.querySelector(".slider__prev");
   const next = document.querySelector(".slider__next");
   const down = document.querySelector(".slider__down");
-  const item = document.querySelectorAll(".slider__item");
+  const items = document.querySelectorAll(".slider__item");
 
   let offset = 1;
 
-  const widthOfItem = item[0].clientWidth;
-  const heightOfItem = item[0].clientHeight;
+  const widthOfItem = items[0].scrollWidth;
+  const heightOfItem = items[0].scrollHeight;
 
-  console.log(heightOfItem);
   const setWidth = (size, offset) => {
     let width = size * offset + "px";
     return (container.style.transform = `translateX(-${width})`);
@@ -23,7 +22,7 @@ const slider = () => {
 
   next.addEventListener("click", () => {
     offset++;
-    if (offset === item.length - 1) offset = 0;
+    if (offset === items.length - 1) offset = 0;
     setWidth(widthOfItem, offset);
   });
 
@@ -37,7 +36,8 @@ const slider = () => {
 
   down.addEventListener("click", () => {
     offset++;
-    if (offset === item.length - 1) offset = 0;
+
+    if (offset === items.length) offset = 0;
     setHeight(heightOfItem, offset);
   });
 };
