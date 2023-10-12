@@ -1,0 +1,166 @@
+.activities {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 726px;
+  position: relative;
+  background-color: $white;
+
+  &__container {
+    display: flex;
+    flex-direction: column;
+    color: $dark-grey;
+    position: relative;
+  }
+
+  &__header {
+    max-width: 600px;
+    position: relative;
+    display: flex;
+    padding: 30px 16px;
+    flex-direction: column;
+    align-content: flex-start;
+    margin: 20px 0;
+  }
+
+  &__header::before {
+    content: "";
+    @include orangeBlock;
+    left: 40px;
+    top: 0px;
+    margin-bottom: 50px;
+  }
+
+  &__paragraph {
+    text-align: left;
+    padding: 20px 0;
+  }
+  &__content {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    min-height: 336px;
+  }
+  &__item {
+    flex: 0 1 49%;
+    display: flex;
+    min-height: 70px;
+    flex-wrap: nowrap;
+    width: 100%;
+    color: $dark-grey;
+    align-items: center;
+    justify-content: center;
+    padding: 10px 15px;
+    line-height: 1.2;
+    margin-bottom: 20px;
+  }
+
+  &__icon {
+    display: block;
+    display: flex;
+    width: 44px;
+    height: 36px;
+    align-self: center;
+    margin-right: 8px;
+  }
+
+  &__name {
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    flex-direction: column;
+    width: 100%;
+    text-align: left;
+    min-height: 70px;
+    padding: 12px 10px;
+    line-height: 1.2;
+  }
+  &__title {
+    font-size: 17px;
+    font-weight: 600;
+    line-height: 1.2;
+    padding: 12px 0;
+  }
+  &__description {
+    text-align: left;
+    position: relative;
+    font-size: 19px;
+    line-height: 1.2;
+    letter-spacing: 0.5px;
+    font-weight: 400;
+  }
+  &__description::before {
+    content: "";
+    display: block;
+    left: -10px;
+    padding: 12px 0;
+    max-height: 100%;
+    width: 2px;
+    position: absolute;
+    background-color: $dull-orange;
+  }
+}
+
+@media (max-width: 768px) {
+  .activities {
+    &__item {
+      margin-top: 10px;
+      position: relative;
+      flex: 0 1 50%;
+      max-width: 420px;
+      display: flex;
+      height: auto;
+      align-items: flex-end;
+      justify-content: flex-end;
+    }
+
+    &__header::before {
+      top: 10px;
+      left: 40px;
+    }
+    &__description {
+      font-size: 16px;
+    }
+  }
+}
+
+@media (max-width: 520px) {
+  .activities {
+    &__paragraph,
+    &__heading {
+      text-align: center;
+    }
+
+    &__content {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    &__header::before {
+      left: 50%;
+    }
+
+    &__item {
+      display: flex;
+      flex-direction: column;
+      margin-top: 10px;
+      position: relative;
+      flex: 0 1 80%;
+    }
+    &__name {
+      font-size: 16px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      text-align: center;
+    }
+    &__title {
+      font-weight: 700;
+    }
+
+    &__description {
+      text-align: left;
+    }
+  }
+}
