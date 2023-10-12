@@ -99,11 +99,19 @@
       height: max-content;
     }
 
+    &__content {
+      padding: 15px 20px;
+    }
+    &__item {
+      width: 100%;
+      justify-content: flex-start;
+    }
     &__header {
       display: flex;
       justify-content: center;
       align-items: center;
       min-height: 220px;
+      margin-right: 0;
     }
     &__header::before {
       left: 50%;
