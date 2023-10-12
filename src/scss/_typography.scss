@@ -11,3 +11,18 @@
   line-height: 1.4;
   color: $dark-grey;
 }
+
+/* change color on hover etc*/
+.logo {
+  display: block;
+  max-width: 130px;
+  height: 50px;
+  color: #fff;
+  fill: currentColor;
+  transition: all 0.3s ease-in;
+}
+
+.logo:hover {
+  color: $dull-orange;
+  fill: currentColor;
+}
