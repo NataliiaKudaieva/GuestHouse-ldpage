@@ -62,6 +62,14 @@
       left: -10px;
     }
   }
+  &__select--horizontal {
+    display: none;
+  }
+  &__down,
+  &__up {
+    position: absolute;
+    margin-bottom: 5px;
+  }
   &__select {
     display: flex;
     align-self: flex-end;
@@ -79,10 +87,11 @@
     justify-content: center;
     align-items: center;
   }
-  &__down {
-    display: none;
-  }
+
   &__arrow {
+    display: inline-block;
+    position: absolute;
+    z-index: 2222222;
     width: 25px;
     height: 25px;
     color: $dark-grey-1;
@@ -107,13 +116,20 @@
       padding: 10px 20px;
       z-index: 2;
     }
-    &__down {
-      display: block;
+    &__select--horizontal {
       position: absolute;
+      top: 50%;
+      right: 10%;
       display: flex;
-      left: 80%;
-      top: 60%;
+      flex-direction: column;
+    }
+    &__down,
+    &__up {
+      display: block;
+      display: flex;
       z-index: 1111111;
+      width: 50px;
+      height: 50px;
     }
 
     &__select {
@@ -148,10 +164,6 @@
     &__icon {
       width: 18px;
       height: 18px;
-    }
-    &__down {
-      top: 80%;
-      left: 85%;
     }
   }
 }
