@@ -10,7 +10,7 @@ const slider = () => {
 
   const widthOfItem = items[0].offsetWidth;
   const heightOfItem = items[0].offsetHeight;
-  console.log(heightOfItem);
+
   const setWidth = (size, offset) => {
     let width = size * offset + "px";
     return (container.style.transform = `translateX(-${width})`);
@@ -23,7 +23,7 @@ const slider = () => {
 
   next.addEventListener("click", () => {
     offset++;
-    if (offset === items.length - 1) offset = 0;
+    if (offset === items.length) offset = 1;
     setWidth(widthOfItem, offset);
   });
 
@@ -38,7 +38,7 @@ const slider = () => {
   down.addEventListener("click", () => {
     offset++;
 
-    if (offset === items.length) offset = 0;
+    if (offset === items.length - 1) offset = 1;
     setHeight(heightOfItem, offset);
   });
 
