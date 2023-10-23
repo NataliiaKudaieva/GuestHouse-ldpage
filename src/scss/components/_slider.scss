@@ -65,9 +65,8 @@
   &__select--horizontal {
     display: none;
   }
-  &__down,
+
   &__up {
-    position: absolute;
     margin-bottom: 5px;
   }
   &__select {
@@ -90,7 +89,7 @@
 
   &__arrow {
     display: inline-block;
-    position: absolute;
+    position: relative;
     z-index: 2222222;
     width: 25px;
     height: 25px;
@@ -118,13 +117,16 @@
     }
     &__select--horizontal {
       position: absolute;
-      top: 50%;
-      right: 10%;
+      top: 65%;
+      right: 0;
       display: flex;
       flex-direction: column;
+      justify-content: center;
     }
+
     &__down,
     &__up {
+      position: relative;
       display: block;
       display: flex;
       z-index: 1111111;
@@ -143,7 +145,6 @@
     &__item {
       margin-bottom: 15px;
     }
-
     &__review {
       font-size: 14px;
     }
@@ -152,11 +153,7 @@
     &__comment {
       font-size: 18px;
     }
-    &__btn,
-    &__icon {
-      height: 40px;
-      width: 40px;
-    }
+
     &__stars {
       padding: 10px 0;
     }
@@ -164,6 +161,14 @@
     &__icon {
       width: 18px;
       height: 18px;
+    }
+  }
+}
+
+@media (max-width: 340px) {
+  .slider {
+    &__select--horizontal {
+      bottom: 0;
     }
   }
 }

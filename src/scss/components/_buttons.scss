@@ -13,7 +13,8 @@
   &--white {
     color: $dark-grey;
     transition: all 0.3s;
-
+    background-color: #fff;
+    border-radius: 1px solid $dull-orange;
     &:hover {
       color: #fff;
       background-color: $dark-grey;
