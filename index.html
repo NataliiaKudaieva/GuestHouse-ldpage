@@ -12,12 +12,8 @@
       rel="stylesheet"
     />
     <script src="https://unpkg.com/scrollreveal"></script>
-    <script
-      src="https://cdnjs.cloudflare.com/ajax/libs/vivus/0.4.6/vivus.min.js"
-      integrity="sha512-oUUeA7VTcWBqUJD/VYCBB4VeIE0g1pg5aRMiSUOMGnNNeCLRS39OlkcyyeJ0hYx2h3zxmIWhyKiUXKkfZ5Wryg=="
-      crossorigin="anonymous"
-      referrerpolicy="no-referrer"
-    ></script>
+    <link rel="stylesheet" href="./src/css/main.css" />
+    <script type="module" src="./src/index.js"></script>
   </head>
 
   <body>
@@ -52,7 +48,7 @@
             </li>
           </ul>
         </nav>
-        <button class="header__btn btn btn--white">Book now</button>
+        <a class="header__btn btn btn--white" href="book.html">Book now</a>
       </div>
     </header>
 
@@ -87,7 +83,9 @@
                 included in the price. Don't hesitate to reach out to us vi the
                 contact page if you have any questions around your stay.
               </p>
-              <button class="history__btn btn btn--dark">Book now</button>
+              <a href="book.html" class="history__btn btn btn--dark"
+                >Book now</a
+              >
             </div>
           </div>
         </div>
@@ -418,8 +416,45 @@
 
           <div class="slider__select--horizontal">
             <div class="slider__btn slider__up">
-              <svg class="slider__arrow">
-                <use xlink:href="/static/icons/arrowsSprite.svg#up"></use>
+              <?xml version="1.0" ?>
+
+              <svg
+                width="800px"
+                height="800px"
+                viewBox="0 0 24 24"
+                xmlns="http://www.w3.org/2000/svg"
+                class="slider__arrow"
+              >
+                <title />
+
+                <g id="Complete">
+                  <g id="arrow-up">
+                    <g>
+                      <polyline
+                        data-name="Right"
+                        fill="none"
+                        id="Right-2"
+                        points="7 7.5 12 2.5 17 7.5"
+                        stroke="#000000"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="2"
+                      />
+
+                      <line
+                        fill="none"
+                        stroke="#000000"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="2"
+                        x1="12"
+                        x2="12"
+                        y1="21.3"
+                        y2="4.8"
+                      />
+                    </g>
+                  </g>
+                </g>
               </svg>
             </div>
 
@@ -503,7 +538,9 @@
             >
             <div class="booking__button-container">
               <button class="btn booking__btn btn--dark">Contact</button>
-              <button class="btn booking__btn btn--dark">Book now</button>
+              <a href="book.html" class="btn booking__btn btn--dark"
+                >Book now</a
+              >
             </div>
           </div>
         </div>
